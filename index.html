@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Softlarism</title>
+  
+  <style>
+    /* Carrusel */
+    .carousel {
+      position: relative;
+      width: 50%;
+      max-width: 500px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+  
+  </style>
+  
+</head>
+
+<body style="background-color: lightgrey; font-family: Arial, sans-serif; margin:0; padding: 20px;">
+
+  
+  <header style="background-color: lemonchiffon; font-family: Georgia, serif; margin:0; 
+          padding: 20px; display: flex; align-items: center; justify-content: space-between">
+      
+    <div style="flex: 1; text-align: left;">
+    <img src="logo.png" alt="Logo de Softlarism" width="130">
+    </div>
+
+    <div style="flex: 1; text-align: center;">
+      <h1 style="margin: 0;">Softlarism</h1>
+    </div>
+      
+    <div style="flex: 1;"></div>
+
+  </header>
+
+  
+  <h2>Bienvenido a la página oficial de Softlarism</h2>
+  <p>Esta es una empresa dedicada al desarrollo de software en focado a la solución de diversos
+      problemas dentro de la comunidad. Trabajamos para poder presentar sistemas de alta calidad
+      y satisfacer las peticiones de nuestros usuarios.</p>
+  
+  <div class="carousel">
+    <div class="slides">
+      <img src="empresa.jpg" alt="Imagen 1">
+      <img src="gimnasio.jpg" alt="Imagen 2">
+      <img src="seguridad.jpg" alt="Imagen 3">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+  
+  <script>
+    let index = 0;
+
+    function moveSlide(step) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = slides.children.length;
+      index = (index + step + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    setInterval(() => moveSlide(1), 3000);
+  </script>
+
+  <br>
+  <br>
+  
+  <div style="margin-top: 20px; text-align: center;">
+    <a href="mision.html" style="text-decoration: none;">
+      <button style="padding: 15px 25px; margin: 5px; background-color: lightblue; border: none; border-radius: 10px; cursor: pointer; font-family: Times New Roman; font-size: 16px">
+          Mision,Vision y objetivos</button>
+    </a>
+    <a href="Servicios.html" style="text-decoration: none;">
+      <button style="padding: 15px 25px; margin: 5px; background-color: lightblue; border: none; border-radius: 10px; cursor: pointer; font-family: Times New Roman; font-size: 16px">Que ofrecemos</button>
+    </a>
+       <a href="Portafolio.html" style="text-decoration: none;">
+      <button style="padding: 15px 25px; margin: 5px; background-color: lightblue; border: none; border-radius: 10px; cursor: pointer; font-family: Times New Roman; font-size: 16px;">Portafolio SOFTLARISM</button>
+    </a>
+    
+  </div>
+  <br>
+  <br>
+ 
+  <footer style="margin-top: 130px; font-family: New Times Roman; background-color: lemonchiffon; text-align: center;">
+    <p>MEDIOS DE CONTACTO SOFTLARISM</p>
+    <p>CORREO ELECTRÓNICO: softlarism@gmail.com</p>
+    <p>© 2025 Softlarism</p>
+  </footer>
+
+</body>
+</html>

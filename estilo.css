@@ -1,0 +1,40 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 7 sep 2025, 2:17:08 p.m.
+    Author     : mimim
+*/
+
+body {
+    background-color: lightgray;
+    font-family: Lucida Handwriting;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f2f2f2;
+    font-family: Garamond;
+}
+
+th, td {
+    border: 1px solid #0056b3;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+footer {
+    margin-top: 180px;
+    background-color: lemonchiffon;
+    font-family: New Times Roman;
+    text-align: center;
+    color: black;
+}
